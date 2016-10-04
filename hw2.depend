@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1475562602 source:c:\users\mystia\downloads\105598010_hw2\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/UnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1475549590 c:\users\mystia\downloads\105598010_hw2\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1475549590 c:\users\mystia\downloads\105598010_hw2\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1475549590 c:\users\mystia\downloads\105598010_hw2\cppunitlite\simplestring.h
+
+1475549591 c:\users\mystia\downloads\105598010_hw2\cppunitlite\testresult.h
+
+1475549589 c:\users\mystia\downloads\105598010_hw2\cppunitlite\failure.h
+	"SimpleString.h"
+
+1475549590 c:\users\mystia\downloads\105598010_hw2\cppunitlite\testregistry.h
+
+1475559734 c:\users\mystia\downloads\105598010_hw2\unittest\unittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1475568229 c:\users\mystia\downloads\105598010_hw2\include\shape.h
+	<list>
+	<vector>
+	<math.h>
+	<stdlib.h>
+
+1475559193 source:c:\users\mystia\downloads\105598010_hw2\src\shape.cpp
+	"Shape.h"
+
+1475560657 c:\users\mystia\downloads\105598010_hw2\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+
+1475560635 c:\users\mystia\downloads\105598010_hw2\include\circle.h
+	"Shape.h"
+
+1475558670 c:\users\mystia\downloads\105598010_hw2\include\rectangle.h
+	"Shape.h"
+
+1475558794 c:\users\mystia\downloads\105598010_hw2\include\triangle.h
+	"Shape.h"
+
+1475558629 source:c:\users\mystia\downloads\105598010_hw2\src\circle.cpp
+	"Circle.h"
+
+1475558638 source:c:\users\mystia\downloads\105598010_hw2\src\rectangle.cpp
+	"Rectangle.h"
+
+1475558702 source:c:\users\mystia\downloads\105598010_hw2\src\triangle.cpp
+	"Triangle.h"
+

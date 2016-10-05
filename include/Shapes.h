@@ -4,4 +4,5 @@
 #include "Circle.h"
 #include "Rectangle.h"
 #include "Triangle.h"
+#include "ComboShape.h"
 #endif // SHAPES_H_INCLUDED

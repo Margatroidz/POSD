@@ -2,10 +2,13 @@
 #define SHAPE_H
 #define ERROR "Illegal input !"
 #define PI 3.1415926
-#include <list>
+#include <algorithm>
 #include <vector>
+#include <string>
 #include <math.h>
 #include <stdlib.h>
+
+using namespace std;
 
 struct Point_t
 {
@@ -21,10 +24,10 @@ public:
     virtual double perimeter() = 0;
 };
 
-double PerimeterOfShapes(std::vector<Shape*> shapes);
+double PerimeterOfShapes(vector<Shape*> shapes);
 
-Shape* MaxArea(std::vector<Shape*> shapes);
+Shape* MaxArea(vector<Shape*> shapes);
 
-std::vector<Shape*> SortByDecreasingPerimeter(std::vector<Shape*> shapes);
+vector<Shape*> SortByDecreasingPerimeter(vector<Shape*> shapes);
 
 #endif // SHAPE_H

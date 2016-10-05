@@ -63,3 +63,75 @@
 1475558702 source:c:\users\mystia\downloads\105598010_hw2\src\triangle.cpp
 	"Triangle.h"
 
+1475656474 source:c:\users\mystia\desktop\posd\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/UnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1475549590 c:\users\mystia\desktop\posd\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1475549590 c:\users\mystia\desktop\posd\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1475549590 c:\users\mystia\desktop\posd\cppunitlite\simplestring.h
+
+1475549591 c:\users\mystia\desktop\posd\cppunitlite\testresult.h
+
+1475549589 c:\users\mystia\desktop\posd\cppunitlite\failure.h
+	"SimpleString.h"
+
+1475549590 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
+
+1475660851 c:\users\mystia\desktop\posd\unittest\unittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1475660745 c:\users\mystia\desktop\posd\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+	"ComboShape.h"
+
+1475660888 c:\users\mystia\desktop\posd\include\shape.h
+	<algorithm>
+	<vector>
+	<string>
+	<math.h>
+	<stdlib.h>
+
+1475560635 c:\users\mystia\desktop\posd\include\circle.h
+	"Shape.h"
+
+1475558670 c:\users\mystia\desktop\posd\include\rectangle.h
+	"Shape.h"
+
+1475558794 c:\users\mystia\desktop\posd\include\triangle.h
+	"Shape.h"
+
+1475558629 source:c:\users\mystia\desktop\posd\src\circle.cpp
+	"Circle.h"
+
+1475558638 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
+	"Rectangle.h"
+
+1475558702 source:c:\users\mystia\desktop\posd\src\triangle.cpp
+	"Triangle.h"
+
+1475656450 source:c:\users\mystia\desktop\posd\src\shape.cpp
+	"Shape.h"
+
+1475660920 c:\users\mystia\desktop\posd\include\comboshape.h
+	"Shape.h"
+
+1475660625 source:c:\users\mystia\desktop\posd\src\comboshape.cpp
+	"ComboShape.h"
+

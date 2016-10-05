@@ -42,6 +42,7 @@
 		</Compiler>
 		<Unit filename="UnitTest/UnitTest.h" />
 		<Unit filename="include/Circle.h" />
+		<Unit filename="include/ComboShape.h" />
 		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Shape.h" />
 		<Unit filename="include/Shapes.h">
@@ -50,6 +51,7 @@
 		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Circle.cpp" />
+		<Unit filename="src/ComboShape.cpp" />
 		<Unit filename="src/Rectangle.cpp" />
 		<Unit filename="src/Shape.cpp" />
 		<Unit filename="src/Triangle.cpp" />

@@ -112,6 +112,9 @@ TEST(PerimeterOfShapesTest, PerimeterOfShapes)
     delete circle;
     delete rectangle;
     delete triangle;
+
+    ComboShape* d = new ComboShape("ASD");
+    //combo->Add(circle);
 }
 
 

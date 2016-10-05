@@ -54,6 +54,10 @@ void Run()
         printf("Computing the sum of perimeters of a number of shapes, including at least one of each of rectangle, circle and triangle.Using Shapes Created by No.1 ~ No.3\n");
 
         cout << PerimeterOfShapes(shapes) << endl;
+
+        cout << shapes[0]->perimeter() << " , " << shapes[1]->perimeter() << " , " << shapes[2]->perimeter() <<endl;
+        shapes = SortByDecreasingPerimeter(shapes);
+        cout << shapes[0]->perimeter() << " , " << shapes[1]->perimeter() << " , " << shapes[2]->perimeter() <<endl;
     }
     catch(char const* e)
     {

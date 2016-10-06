@@ -1,20 +1,20 @@
 #include "Shape.h"
 
-double AreaOfShapes(vector<Shape*> shapes)
+double AreaOfShapes(const vector<Shape*> &shapes)
 {
     double sum = 0;
     for(Shape* s : shapes) sum += s->Area();
     return sum;
 }
 
-double PerimeterOfShapes(vector<Shape*> shapes)
+double PerimeterOfShapes(const vector<Shape*> &shapes)
 {
     double sum = 0;
     for(Shape* s : shapes) sum += s->Perimeter();
     return sum;
 }
 
-Shape* MaxArea(vector<Shape*> shapes)
+Shape* MaxArea(vector<Shape*> &shapes)
 {
     Shape* max = shapes[0];
     for(Shape* s : shapes) {

@@ -24,11 +24,11 @@ public:
     virtual double Perimeter() const = 0;
 };
 
-double AreaOfShapes(vector<Shape*> shapes);
+double AreaOfShapes(const vector<Shape*> &shapes);
 
-double PerimeterOfShapes(vector<Shape*> shapes);
+double PerimeterOfShapes(const vector<Shape*> &shapes);
 
-Shape* MaxArea(vector<Shape*> shapes);
+Shape* MaxArea(vector<Shape*> &shapes);
 
 vector<Shape*> SortByDecreasingPerimeter(vector<Shape*> shapes);
 

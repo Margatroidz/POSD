@@ -20,9 +20,11 @@ class Shape
 {
 public:
     virtual ~Shape() {};
-    virtual double area() = 0;
-    virtual double perimeter() = 0;
+    virtual double Area() const = 0;
+    virtual double Perimeter() const = 0;
 };
+
+double AreaOfShapes(vector<Shape*> shapes);
 
 double PerimeterOfShapes(vector<Shape*> shapes);
 

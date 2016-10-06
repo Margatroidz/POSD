@@ -1,10 +1,8 @@
 #include "Rectangle.h"
 
-double Rectangle:: area()
-{
+double Rectangle:: Area() const {
     return _width * _height;
 }
-double Rectangle:: perimeter()
-{
+double Rectangle:: Perimeter() const {
     return 2 * (_width + _height);
 }

@@ -135,3 +135,75 @@
 1475660625 source:c:\users\mystia\desktop\posd\src\comboshape.cpp
 	"ComboShape.h"
 
+1475678031 source:d:\download\posd\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/UnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1475634056 d:\download\posd\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1475634056 d:\download\posd\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1475634056 d:\download\posd\cppunitlite\simplestring.h
+
+1475634056 d:\download\posd\cppunitlite\testresult.h
+
+1475634056 d:\download\posd\cppunitlite\failure.h
+	"SimpleString.h"
+
+1475634056 d:\download\posd\cppunitlite\testregistry.h
+
+1475683192 d:\download\posd\unittest\unittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1475669612 d:\download\posd\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+	"ComboShape.h"
+
+1475678263 d:\download\posd\include\shape.h
+	<algorithm>
+	<vector>
+	<string>
+	<math.h>
+	<stdlib.h>
+
+1475676538 d:\download\posd\include\circle.h
+	"Shape.h"
+
+1475677927 d:\download\posd\include\rectangle.h
+	"Shape.h"
+
+1475677940 d:\download\posd\include\triangle.h
+	"Shape.h"
+
+1475677920 d:\download\posd\include\comboshape.h
+	"Shape.h"
+
+1475677948 source:d:\download\posd\src\circle.cpp
+	"Circle.h"
+
+1475678289 source:d:\download\posd\src\comboshape.cpp
+	"ComboShape.h"
+
+1475677959 source:d:\download\posd\src\rectangle.cpp
+	"Rectangle.h"
+
+1475678284 source:d:\download\posd\src\shape.cpp
+	"Shape.h"
+
+1475678065 source:d:\download\posd\src\triangle.cpp
+	"Triangle.h"
+

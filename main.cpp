@@ -22,7 +22,7 @@ void Run()
         Shape* c = new Circle(center, inputData[2]);
         shapes.push_back(c);
 
-        cout << c->perimeter() << endl;
+        cout << c->Perimeter() << endl;
 
         /*第二題*/
         printf("Computing  the perimeter of a rectangle\nFormat : Input 4 number each split by a single space.(upperLeftX upperLeftY width height)\n");
@@ -31,7 +31,7 @@ void Run()
         Shape* r = new Rectangle(upperLeft, inputData[2], inputData[3]);
         shapes.push_back(r);
 
-        cout << r->perimeter() << endl;
+        cout << r->Perimeter() << endl;
 
         /*第三題*/
         printf("Creating a triangle given three points\nFormat : Input 6 number each split by a single space.(point1X point1Y point2X point2Y point3X point3Y)\n");
@@ -44,20 +44,20 @@ void Run()
 
         /*第四題*/
         printf("Computing  the perimeter of a triangle.Using triangle created by No.3\n");
-        cout << t->perimeter() << endl;
+        cout << t->Perimeter() << endl;
 
         /*第五題*/
         printf("Computing  the area of a triangle.Using triangle created by No.3\n");
-        cout << t->area() << endl;
+        cout << t->Area() << endl;
 
         /*第六題*/
         printf("Computing the sum of perimeters of a number of shapes, including at least one of each of rectangle, circle and triangle.Using Shapes Created by No.1 ~ No.3\n");
 
         cout << PerimeterOfShapes(shapes) << endl;
 
-        cout << shapes[0]->perimeter() << " , " << shapes[1]->perimeter() << " , " << shapes[2]->perimeter() <<endl;
+        cout << shapes[0]->Perimeter() << " , " << shapes[1]->Perimeter() << " , " << shapes[2]->Perimeter() <<endl;
         shapes = SortByDecreasingPerimeter(shapes);
-        cout << shapes[0]->perimeter() << " , " << shapes[1]->perimeter() << " , " << shapes[2]->perimeter() <<endl;
+        cout << shapes[0]->Perimeter() << " , " << shapes[1]->Perimeter() << " , " << shapes[2]->Perimeter() <<endl;
     }
     catch(char const* e)
     {

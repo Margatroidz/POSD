@@ -8,11 +8,12 @@ public:
     ComboShape(string s) :
         _name(s) {};
     ~ComboShape() {};
-    virtual double area();
-    virtual double perimeter();
-    //void Add(Shape* shape);
+    virtual double Area() const;
+    virtual double Perimeter() const;
+    void Add(Shape* shape);
 private:
     string _name;
+    vector<Shape*> _shapes;
 };
 
 #endif // COMBOSHAPE_H

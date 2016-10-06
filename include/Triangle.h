@@ -11,8 +11,8 @@ public:
                                                             double line3 = sqrt(pow(abs(point3.x - point1.x), 2) + pow(abs(point3.y - point1.y), 2));
                                                             if((line1 + line2 <= line3) || (line1 + line3 <= line2) || (line2 + line3 <= line1)) throw ERROR;};
     ~Triangle() {};
-    virtual double area();
-    virtual double perimeter();
+    virtual double Area() const;
+    virtual double Perimeter() const;
 private:
     Point_t _point1;
     Point_t _point2;

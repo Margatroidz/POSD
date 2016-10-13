@@ -89,17 +89,16 @@
 
 1475549590 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
 
-1475745236 c:\users\mystia\desktop\posd\unittest\unittest.h
+1476351190 c:\users\mystia\desktop\posd\unittest\unittest.h
 	"Shapes.h"
 	<vector>
 	<string.h>
 
-1475660745 c:\users\mystia\desktop\posd\include\shapes.h
+1476351175 c:\users\mystia\desktop\posd\include\shapes.h
 	"Shape.h"
 	"Circle.h"
 	"Rectangle.h"
 	"Triangle.h"
-	"ComboShape.h"
 
 1475731499 c:\users\mystia\desktop\posd\include\shape.h
 	<algorithm>
@@ -108,13 +107,13 @@
 	<math.h>
 	<stdlib.h>
 
-1475729030 c:\users\mystia\desktop\posd\include\circle.h
+1476352070 c:\users\mystia\desktop\posd\include\circle.h
 	"Shape.h"
 
-1475729030 c:\users\mystia\desktop\posd\include\rectangle.h
+1476351964 c:\users\mystia\desktop\posd\include\rectangle.h
 	"Shape.h"
 
-1475729030 c:\users\mystia\desktop\posd\include\triangle.h
+1476352022 c:\users\mystia\desktop\posd\include\triangle.h
 	"Shape.h"
 
 1475729030 source:c:\users\mystia\desktop\posd\src\circle.cpp
@@ -206,4 +205,23 @@
 
 1475678065 source:d:\download\posd\src\triangle.cpp
 	"Triangle.h"
+
+1476351249 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
+	"ComboMedia.h"
+
+1476351228 c:\users\mystia\desktop\posd\include\combomedia.h
+	<vector>
+	"Media.h"
+
+1476351218 c:\users\mystia\desktop\posd\include\media.h
+
+1476349839 source:c:\users\mystia\desktop\posd\src\media.cpp
+	"Media.h"
+
+1476351726 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
+	"ShapeMedia.h"
+
+1476351838 c:\users\mystia\desktop\posd\include\shapemedia.h
+	"Media.h"
+	"Shape.h"
 

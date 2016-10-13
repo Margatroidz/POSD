@@ -5,9 +5,8 @@
 class Circle : public Shape
 {
 public:
-    Circle(Point_t center, double radius):
-        _center(center), _radius(radius) { if(radius < 0) throw ERROR; };
-    ~Circle() {};
+    Circle(Point_t center, double radius);
+    ~Circle();
     virtual double Area() const;
     virtual double Perimeter() const;
 private:

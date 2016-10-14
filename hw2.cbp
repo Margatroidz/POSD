@@ -40,23 +40,22 @@
 			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="UnitTest/UnitTest.h" />
+		<Unit filename="UnitTest/MediaUnitTest.h" />
+		<Unit filename="UnitTest/ShapeUnitTest.h" />
 		<Unit filename="include/Circle.h" />
-		<Unit filename="include/ComboMedia.h" />
-		<Unit filename="include/ComboShape.h" />
 		<Unit filename="include/Media.h" />
 		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Shape.h" />
-		<Unit filename="include/ShapeMedia.h" />
 		<Unit filename="include/Shapes.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/AreaVisitor.cpp" />
 		<Unit filename="src/Circle.cpp" />
 		<Unit filename="src/ComboMedia.cpp" />
-		<Unit filename="src/ComboShape.cpp" />
 		<Unit filename="src/Media.cpp" />
+		<Unit filename="src/MediaVisitor.cpp" />
 		<Unit filename="src/Rectangle.cpp" />
 		<Unit filename="src/Shape.cpp" />
 		<Unit filename="src/ShapeMedia.cpp" />

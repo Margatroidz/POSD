@@ -1,11 +1,14 @@
 #include "Media.h"
 
-Media::Media()
+Media :: Media()
 {
-    //ctor
 }
 
-Media::~Media()
+Media :: ~Media()
 {
-    //dtor
+}
+
+void Media :: Accept(MediaVisitor* vistor)
+{
+    throw "Prohibition Visitors";
 }

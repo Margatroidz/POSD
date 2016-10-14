@@ -63,10 +63,11 @@
 1475558702 source:c:\users\mystia\downloads\105598010_hw2\src\triangle.cpp
 	"Triangle.h"
 
-1475729030 source:c:\users\mystia\desktop\posd\main.cpp
+1476428887 source:c:\users\mystia\desktop\posd\main.cpp
 	<iostream>
 	"cppunitlite/TestHarness.h"
-	"UnitTest/UnitTest.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
 	<stdio.h>
 	<stdlib.h>
 
@@ -116,13 +117,13 @@
 1476352022 c:\users\mystia\desktop\posd\include\triangle.h
 	"Shape.h"
 
-1475729030 source:c:\users\mystia\desktop\posd\src\circle.cpp
+1476352052 source:c:\users\mystia\desktop\posd\src\circle.cpp
 	"Circle.h"
 
-1475729030 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
+1476351980 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
 	"Rectangle.h"
 
-1475729030 source:c:\users\mystia\desktop\posd\src\triangle.cpp
+1476352011 source:c:\users\mystia\desktop\posd\src\triangle.cpp
 	"Triangle.h"
 
 1475731507 source:c:\users\mystia\desktop\posd\src\shape.cpp
@@ -206,22 +207,58 @@
 1475678065 source:d:\download\posd\src\triangle.cpp
 	"Triangle.h"
 
-1476351249 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
-	"ComboMedia.h"
+1476434093 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
+	"Media.h"
 
-1476351228 c:\users\mystia\desktop\posd\include\combomedia.h
+1476432108 c:\users\mystia\desktop\posd\include\combomedia.h
 	<vector>
+	"Vistors.h"
 	"Media.h"
 
-1476351218 c:\users\mystia\desktop\posd\include\media.h
+1476434699 c:\users\mystia\desktop\posd\include\media.h
+	"Shapes.h"
+	"vector"
 
-1476349839 source:c:\users\mystia\desktop\posd\src\media.cpp
+1476434157 source:c:\users\mystia\desktop\posd\src\media.cpp
 	"Media.h"
 
-1476351726 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
-	"ShapeMedia.h"
+1476434322 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
+	"Media.h"
 
-1476351838 c:\users\mystia\desktop\posd\include\shapemedia.h
+1476430357 c:\users\mystia\desktop\posd\include\shapemedia.h
 	"Media.h"
 	"Shape.h"
+
+1476434777 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
+	"Media.h"
+	"Shapes.h"
+	<vector>
+	<string.h>
+	"iostream"
+
+1476428939 c:\users\mystia\desktop\posd\unittest\shapeunittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1476432132 c:\users\mystia\desktop\posd\include\mediavisitor.h
+	"Medias.h"
+
+1476434856 source:c:\users\mystia\desktop\posd\src\areavisitor.cpp
+	"Media.h"
+
+1476431471 c:\users\mystia\desktop\posd\include\areavisitor.h
+	"MediaVisitor.h"
+
+1476433614 source:c:\users\mystia\desktop\posd\src\mediavisitor.cpp
+	"Media.h"
+
+1476431223 c:\users\mystia\desktop\posd\include\medias.h
+	"Media.h"
+	"ComboMedia.h"
+	"ShapeMedia.h"
+
+1476431265 c:\users\mystia\desktop\posd\include\vistors.h
+	"MediaVisitor.h"
+	"AreaVisitor.h"
 

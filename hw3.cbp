@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="105598010_HW2" />
+		<Option title="105598010_HW3" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -56,6 +56,7 @@
 		<Unit filename="src/ComboMedia.cpp" />
 		<Unit filename="src/Media.cpp" />
 		<Unit filename="src/MediaVisitor.cpp" />
+		<Unit filename="src/PerimeterVisitor.cpp" />
 		<Unit filename="src/Rectangle.cpp" />
 		<Unit filename="src/Shape.cpp" />
 		<Unit filename="src/ShapeMedia.cpp" />

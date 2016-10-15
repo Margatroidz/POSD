@@ -58,4 +58,16 @@ private:
     double _total;
 };
 
+class PerimeterVisitor : public MediaVisitor
+{
+public:
+    PerimeterVisitor();
+    virtual ~PerimeterVisitor();
+    void Visit(ShapeMedia* shapeMedia);
+    void Visit(ComboMedia* comboMedia);
+    double TotalPerimeter() const;
+private:
+    double _total;
+};
+
 #endif // MEDIA_H

@@ -262,3 +262,98 @@
 	"MediaVisitor.h"
 	"AreaVisitor.h"
 
+1476536755 source:d:\download\posdo\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1476536755 d:\download\posdo\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1476536755 d:\download\posdo\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1476536755 d:\download\posdo\cppunitlite\simplestring.h
+
+1476536755 d:\download\posdo\cppunitlite\testresult.h
+
+1476536755 d:\download\posdo\cppunitlite\failure.h
+	"SimpleString.h"
+
+1476536755 d:\download\posdo\cppunitlite\testregistry.h
+
+1476539684 d:\download\posdo\unittest\mediaunittest.h
+	"Media.h"
+	"Shapes.h"
+	<vector>
+	<string.h>
+	"iostream"
+
+1476536924 d:\download\posdo\include\media.h
+	"Shapes.h"
+	"vector"
+
+1476536755 d:\download\posdo\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+
+1476536755 d:\download\posdo\include\shape.h
+	<algorithm>
+	<vector>
+	<string>
+	<math.h>
+	<stdlib.h>
+
+1476536755 d:\download\posdo\include\circle.h
+	"Shape.h"
+
+1476536755 d:\download\posdo\include\rectangle.h
+	"Shape.h"
+
+1476536755 d:\download\posdo\include\triangle.h
+	"Shape.h"
+
+1476536755 d:\download\posdo\unittest\shapeunittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1476536755 source:d:\download\posdo\src\areavisitor.cpp
+	"Media.h"
+
+1476536755 source:d:\download\posdo\src\circle.cpp
+	"Circle.h"
+
+1476536755 source:d:\download\posdo\src\combomedia.cpp
+	"Media.h"
+
+1476536755 source:d:\download\posdo\src\media.cpp
+	"Media.h"
+
+1476536755 source:d:\download\posdo\src\mediavisitor.cpp
+	"Media.h"
+
+1476536755 source:d:\download\posdo\src\rectangle.cpp
+	"Rectangle.h"
+
+1476536755 source:d:\download\posdo\src\shape.cpp
+	"Shape.h"
+
+1476536755 source:d:\download\posdo\src\shapemedia.cpp
+	"Media.h"
+
+1476536755 source:d:\download\posdo\src\triangle.cpp
+	"Triangle.h"
+
+1476536940 source:d:\download\posdo\src\perimetervisitor.cpp
+	"Media.h"
+

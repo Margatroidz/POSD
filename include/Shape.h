@@ -22,6 +22,7 @@ public:
     virtual ~Shape() {};
     virtual double Area() const = 0;
     virtual double Perimeter() const = 0;
+    virtual string Description() const = 0;
 };
 
 double AreaOfShapes(const vector<Shape*> &shapes);

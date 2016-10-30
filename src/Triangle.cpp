@@ -1,4 +1,5 @@
 #include "Triangle.h"
+#include <sstream>
 
 Triangle :: Triangle(Point_t point1, Point_t point2, Point_t point3):
     _point1(point1), _point2(point2), _point3(point3)
@@ -27,4 +28,11 @@ double Triangle :: Perimeter() const
     double line2 = sqrt(pow(abs(_point2.x - _point3.x), 2) + pow(abs(_point2.y - _point3.y), 2));
     double line3 = sqrt(pow(abs(_point3.x - _point1.x), 2) + pow(abs(_point3.y - _point1.y), 2));
     return line1 + line2 + line3;
+}
+
+string Triangle :: Description() const
+{
+    stringstream ss;
+    ss << "t(" << _point1.x << " " << _point1.y << " " << _point2.x << " " << _point2.y << " " << _point3.x << " " << _point3.y << ") ";
+    return ss.str();
 }

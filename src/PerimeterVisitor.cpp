@@ -18,7 +18,6 @@ void PerimeterVisitor :: Visit(ShapeMedia* shapeMedia)
 
 void PerimeterVisitor :: Visit(ComboMedia* comboMedia)
 {
-    comboMedia->Accept(this);
 }
 
 double PerimeterVisitor :: TotalPerimeter() const

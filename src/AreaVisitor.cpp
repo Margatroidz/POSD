@@ -18,7 +18,6 @@ void AreaVisitor :: Visit(ShapeMedia* shapeMedia)
 
 void AreaVisitor :: Visit(ComboMedia* comboMedia)
 {
-    comboMedia->Accept(this);
 }
 
 double AreaVisitor :: TotalArea() const

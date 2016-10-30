@@ -9,6 +9,7 @@ public:
     ~Circle();
     virtual double Area() const;
     virtual double Perimeter() const;
+    virtual string Description() const;
 private:
     Point_t _center;
     double _radius;

@@ -5,7 +5,7 @@
 #include <vector>
 #include <string.h>
 #define THRESH_HLOD 0.00001
-#include "iostream"
+#include <iostream>
 
 TEST(ComboMediaTest, RegularHexagon)
 {
@@ -27,6 +27,12 @@ TEST(ComboMediaTest, RegularHexagon)
     AreaVisitor* av = new AreaVisitor();
     cm->Accept(av);
     DOUBLES_EQUAL(10.3923, av->TotalArea(), THRESH_HLOD);
+
+    delete r;
+    delete t1;
+    delete t2;
+    delete cm;
+    delete av;
 }
 
 TEST(AreaVistorTest, AreaVistor)
@@ -49,6 +55,15 @@ TEST(AreaVistorTest, AreaVistor)
     AreaVisitor* av = new AreaVisitor();
     cm->Accept(av);
     DOUBLES_EQUAL(168.938037, av->TotalArea(), THRESH_HLOD);
+
+    delete r;
+    delete c;
+    delete t1;
+    delete t2;
+    delete cm;
+    delete cm1;
+    delete cm2;
+    delete av;
 }
 
 TEST(PerimeterVisitorTest, PerimeterVisitor)
@@ -71,6 +86,111 @@ TEST(PerimeterVisitorTest, PerimeterVisitor)
     PerimeterVisitor* pv = new PerimeterVisitor();
     cm->Accept(pv);
     DOUBLES_EQUAL(77.05119, pv->TotalPerimeter(), THRESH_HLOD);
+
+    delete r;
+    delete c;
+    delete t1;
+    delete t2;
+    delete cm;
+    delete cm1;
+    delete cm2;
+    delete pv;
+}
+
+TEST(ShapeMediaBuilderTest, ShapeMediaBuilder)
+{
+    ShapeMediaBuilder* sMB = new ShapeMediaBuilder();
+    try{
+        sMB->BuildComboMedia();
+        FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
+    }catch(const char* e)
+    {
+        CHECK(strcmp("can't build combo !", e) == 0);
+    }
+
+    sMB->BuildShapeMedia(new Circle(Point_t{0, 0}, 5));
+    Media* m = sMB->GetMedia();
+    ShapeMedia* sm = (ShapeMedia*)m;
+    DOUBLES_EQUAL(78.539815, sm->Area(), THRESH_HLOD);
+    DOUBLES_EQUAL(31.415926, sm->Perimeter(), THRESH_HLOD);
+
+    delete sMB;
+}
+
+TEST(ComboMediaBuilderTest, ComboMediaBuilder)
+{
+    ComboMediaBuilder* cMB = new ComboMediaBuilder();
+    try{
+        Shape* s = 0;
+        cMB->BuildShapeMedia(s);
+        FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
+    }catch(const char* e)
+    {
+        CHECK(strcmp("need a combo !", e) == 0);
+    }
+    ComboMediaBuilder* cMB2 = new ComboMediaBuilder();
+    ComboMediaBuilder* cMB3 = new ComboMediaBuilder();
+
+    cMB->BuildComboMedia();
+    cMB->BuildShapeMedia(new Rectangle(Point_t{10, 0}, 15, 5));
+    cMB->BuildShapeMedia(new Circle(Point_t{12, 5}, 2));
+    cMB2->BuildComboMedia();
+    cMB2->BuildShapeMedia(cMB->GetMedia());
+    cMB2->BuildShapeMedia(new Rectangle(Point_t{0, 0}, 25, 20));
+    cMB3->BuildComboMedia();
+    cMB3->BuildShapeMedia(cMB2->GetMedia());
+    cMB3->BuildShapeMedia(new Triangle(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20}));
+
+    DescriptionVisitor* dv = new DescriptionVisitor();
+    cMB3->GetMedia()->Accept(dv);
+    CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) )r(0 0 25 20) )t(0 20 16 32 25 20) )") == 0);
+
+    delete cMB;
+    delete cMB2;
+    delete cMB3;
+    delete dv;
+}
+
+TEST(TextMediaTest, TextMedia)
+{
+    //Last
+}
+
+TEST(RemoveMediaTest, RemoveMedia)
+{
+    ComboMediaBuilder* cMB = new ComboMediaBuilder();
+    try{
+        Shape* s = 0;
+        cMB->BuildShapeMedia(s);
+        FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
+    }catch(const char* e)
+    {
+        CHECK(strcmp("need a combo !", e) == 0);
+    }
+    ComboMediaBuilder* cMB2 = new ComboMediaBuilder();
+    ComboMediaBuilder* cMB3 = new ComboMediaBuilder();
+    Media* r;
+
+    cMB->BuildComboMedia();
+    cMB->BuildShapeMedia(new Rectangle(Point_t{10, 0}, 15, 5));
+    cMB->BuildShapeMedia(new Circle(Point_t{12, 5}, 2));
+    cMB2->BuildComboMedia();
+    cMB2->BuildShapeMedia(cMB->GetMedia());
+    //這邊new Media而不是shape來拿media的指標
+    cMB2->BuildShapeMedia(r = new ShapeMedia(new Rectangle(Point_t{0, 0}, 25, 20)));
+    cMB3->BuildComboMedia();
+    cMB3->BuildShapeMedia(cMB2->GetMedia());
+    cMB3->BuildShapeMedia(new Triangle(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20}));
+    cMB2->RemoveMedia(r);
+
+    DescriptionVisitor* dv = new DescriptionVisitor();
+    cMB3->GetMedia()->Accept(dv);
+    CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) ))t(0 20 16 32 25 20) )") == 0);
+
+    delete cMB;
+    delete cMB2;
+    delete cMB3;
+    delete dv;
 }
 
 #endif // UNITTEST_H_INCLUDED

@@ -9,6 +9,7 @@ public:
     ~Triangle();
     virtual double Area() const;
     virtual double Perimeter() const;
+    virtual string Description() const;
 private:
     Point_t _point1;
     Point_t _point2;

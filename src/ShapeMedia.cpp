@@ -1,4 +1,5 @@
 #include "Media.h"
+#include <iostream>
 
 ShapeMedia :: ShapeMedia(Shape* shape) :
     _shape(shape)
@@ -14,12 +15,28 @@ double ShapeMedia :: Area()
 {
     return _shape->Area();
 }
+
 double ShapeMedia :: Perimeter()
 {
     return _shape->Perimeter();
 }
 
-void ShapeMedia :: Accept(MediaVisitor* vistor)
+string ShapeMedia :: Description()
 {
-    vistor->Visit(this);
+    return _shape->Description();
+}
+
+void ShapeMedia :: Accept(AreaVisitor* visitor)
+{
+    visitor->Visit(this);
+}
+
+void ShapeMedia :: Accept(PerimeterVisitor* visitor)
+{
+    visitor->Visit(this);
+}
+
+void ShapeMedia :: Accept(DescriptionVisitor* visitor)
+{
+    visitor->Visit(this);
 }

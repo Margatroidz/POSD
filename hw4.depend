@@ -135,77 +135,80 @@
 1475731527 source:c:\users\mystia\desktop\posd\src\comboshape.cpp
 	"ComboShape.h"
 
-1475678031 source:d:\download\posd\main.cpp
+1476800344 source:d:\download\posd\main.cpp
 	<iostream>
 	"cppunitlite/TestHarness.h"
-	"UnitTest/UnitTest.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
 	<stdio.h>
 	<stdlib.h>
 
-1475634056 d:\download\posd\cppunitlite\testharness.h
+1476800343 d:\download\posd\cppunitlite\testharness.h
 	"Test.h"
 	"TestResult.h"
 	"Failure.h"
 	"TestRegistry.h"
 
-1475634056 d:\download\posd\cppunitlite\test.h
+1476800343 d:\download\posd\cppunitlite\test.h
 	<cmath>
 	"SimpleString.h"
 
-1475634056 d:\download\posd\cppunitlite\simplestring.h
+1476800343 d:\download\posd\cppunitlite\simplestring.h
 
-1475634056 d:\download\posd\cppunitlite\testresult.h
+1476800343 d:\download\posd\cppunitlite\testresult.h
 
-1475634056 d:\download\posd\cppunitlite\failure.h
+1476800343 d:\download\posd\cppunitlite\failure.h
 	"SimpleString.h"
 
-1475634056 d:\download\posd\cppunitlite\testregistry.h
+1476800343 d:\download\posd\cppunitlite\testregistry.h
 
 1475683192 d:\download\posd\unittest\unittest.h
 	"Shapes.h"
 	<vector>
 	<string.h>
 
-1475669612 d:\download\posd\include\shapes.h
+1476800344 d:\download\posd\include\shapes.h
 	"Shape.h"
 	"Circle.h"
 	"Rectangle.h"
 	"Triangle.h"
-	"ComboShape.h"
 
-1475678263 d:\download\posd\include\shape.h
+1477836536 d:\download\posd\include\shape.h
 	<algorithm>
 	<vector>
 	<string>
 	<math.h>
 	<stdlib.h>
 
-1475676538 d:\download\posd\include\circle.h
+1477836506 d:\download\posd\include\circle.h
 	"Shape.h"
 
-1475677927 d:\download\posd\include\rectangle.h
+1477836515 d:\download\posd\include\rectangle.h
 	"Shape.h"
 
-1475677940 d:\download\posd\include\triangle.h
+1477836520 d:\download\posd\include\triangle.h
 	"Shape.h"
 
 1475677920 d:\download\posd\include\comboshape.h
 	"Shape.h"
 
-1475677948 source:d:\download\posd\src\circle.cpp
+1477846878 source:d:\download\posd\src\circle.cpp
 	"Circle.h"
+	<sstream>
 
 1475678289 source:d:\download\posd\src\comboshape.cpp
 	"ComboShape.h"
 
-1475677959 source:d:\download\posd\src\rectangle.cpp
+1477846871 source:d:\download\posd\src\rectangle.cpp
 	"Rectangle.h"
+	<sstream>
 
-1475678284 source:d:\download\posd\src\shape.cpp
+1476800344 source:d:\download\posd\src\shape.cpp
 	"Shape.h"
 
-1475678065 source:d:\download\posd\src\triangle.cpp
+1477846874 source:d:\download\posd\src\triangle.cpp
 	"Triangle.h"
+	<sstream>
 
 1476434093 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
 	"Media.h"
@@ -355,5 +358,53 @@
 	"Triangle.h"
 
 1476536940 source:d:\download\posdo\src\perimetervisitor.cpp
+	"Media.h"
+
+1477849896 d:\download\posd\unittest\mediaunittest.h
+	"Media.h"
+	"Shapes.h"
+	<vector>
+	<string.h>
+	<iostream>
+
+1477849863 d:\download\posd\include\media.h
+	"Shapes.h"
+	<vector>
+
+1476800343 d:\download\posd\unittest\shapeunittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1477840180 source:d:\download\posd\src\areavisitor.cpp
+	"Media.h"
+
+1477848716 source:d:\download\posd\src\combomedia.cpp
+	"Media.h"
+
+1476800344 source:d:\download\posd\src\mediavisitor.cpp
+	"Media.h"
+
+1477840176 source:d:\download\posd\src\perimetervisitor.cpp
+	"Media.h"
+
+1477839356 source:d:\download\posd\src\shapemedia.cpp
+	"Media.h"
+	<iostream>
+
+1476808047 source:d:\download\posd\src\media.cpp
+	"Media.h"
+
+1477843740 source:d:\download\posd\src\descriptionvisitor.cpp
+	"Media.h"
+
+1477849434 source:d:\download\posd\src\combomediabuilder.cpp
+	"Media.h"
+
+1477849149 source:d:\download\posd\src\shapemediabuilder.cpp
+	"Media.h"
+
+1477849859 source:d:\download\posd\src\textmedia.cpp
+	"Media.h"
 	"Media.h"
 

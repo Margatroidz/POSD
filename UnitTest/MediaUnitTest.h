@@ -130,16 +130,20 @@ TEST(ComboMediaBuilderTest, ComboMediaBuilder)
     }
     ComboMediaBuilder* cMB2 = new ComboMediaBuilder();
     ComboMediaBuilder* cMB3 = new ComboMediaBuilder();
+    Rectangle r1(Point_t{10, 0}, 15, 5);
+    Circle c1(Point_t{12, 5}, 2);
+    Rectangle r2(Point_t{0, 0}, 25, 20);
+    Triangle t1(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20});
 
     cMB->BuildComboMedia();
-    cMB->BuildShapeMedia(new Rectangle(Point_t{10, 0}, 15, 5));
-    cMB->BuildShapeMedia(new Circle(Point_t{12, 5}, 2));
+    cMB->BuildShapeMedia(&r1);
+    cMB->BuildShapeMedia(&c1);
     cMB2->BuildComboMedia();
     cMB2->BuildShapeMedia(cMB->GetMedia());
-    cMB2->BuildShapeMedia(new Rectangle(Point_t{0, 0}, 25, 20));
+    cMB2->BuildShapeMedia(&r2);
     cMB3->BuildComboMedia();
     cMB3->BuildShapeMedia(cMB2->GetMedia());
-    cMB3->BuildShapeMedia(new Triangle(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20}));
+    cMB3->BuildShapeMedia(&t1);
 
     DescriptionVisitor* dv = new DescriptionVisitor();
     cMB3->GetMedia()->Accept(dv);
@@ -171,18 +175,21 @@ TEST(RemoveMediaTest, RemoveMedia)
     }
     ComboMediaBuilder* cMB2 = new ComboMediaBuilder();
     ComboMediaBuilder* cMB3 = new ComboMediaBuilder();
+    Rectangle r1(Point_t{10, 0}, 15, 5);
+    Circle c1(Point_t{12, 5}, 2);
+    Triangle t1(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20});
     Media* r;
 
     cMB->BuildComboMedia();
-    cMB->BuildShapeMedia(new Rectangle(Point_t{10, 0}, 15, 5));
-    cMB->BuildShapeMedia(new Circle(Point_t{12, 5}, 2));
+    cMB->BuildShapeMedia(&r1);
+    cMB->BuildShapeMedia(&c1);
     cMB2->BuildComboMedia();
     cMB2->BuildShapeMedia(cMB->GetMedia());
     //這邊new Media而不是shape來拿media的指標
     cMB2->BuildShapeMedia(r = new ShapeMedia(new Rectangle(Point_t{0, 0}, 25, 20)));
     cMB3->BuildComboMedia();
     cMB3->BuildShapeMedia(cMB2->GetMedia());
-    cMB3->BuildShapeMedia(new Triangle(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20}));
+    cMB3->BuildShapeMedia(&t1);
 
     DescriptionVisitor* dv = new DescriptionVisitor();
     cMB3->GetMedia()->Accept(dv);

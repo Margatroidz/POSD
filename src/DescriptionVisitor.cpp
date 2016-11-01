@@ -1,9 +1,8 @@
 #include "Media.h"
 
-DescriptionVisitor :: DescriptionVisitor() :
-    _description("")
+DescriptionVisitor :: DescriptionVisitor()
 {
-    //ctor
+    _descriptionStream.str("");
 }
 
 DescriptionVisitor :: ~DescriptionVisitor()
@@ -14,7 +13,7 @@ DescriptionVisitor :: ~DescriptionVisitor()
 void DescriptionVisitor :: Visit(ShapeMedia* shapeMedia)
 {
     int remainComboSize = _remainCombo.size();
-    _description += shapeMedia->Description();
+    _descriptionStream <<  shapeMedia->Description();
     CompleteCombo(remainComboSize);
 }
 
@@ -24,7 +23,7 @@ void DescriptionVisitor :: Visit(ComboMedia* comboMedia)
 
 void DescriptionVisitor :: AddCombo(int amount)
 {
-    _description += "combo(";
+    _descriptionStream << "combo(";
     _remainCombo.push_back(amount);
 }
 
@@ -36,13 +35,13 @@ void DescriptionVisitor :: CompleteCombo()
 
 string DescriptionVisitor :: Description() const
 {
-    return _description;
+    return _descriptionStream.str();
 }
 
 void DescriptionVisitor :: CompleteCombo(int size)
 {
     if(--_remainCombo[size - 1] == 0){
-        _description += ")";
+        _descriptionStream << ")";
         _remainCombo.pop_back();
     }
 }

@@ -2,6 +2,7 @@
 #define MEDIA_H
 #include "Shapes.h"
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -106,7 +107,7 @@ public:
     string Description() const;
 private:
     vector<int> _remainCombo;
-    string _description;
+    stringstream _descriptionStream;
     void CompleteCombo(int size);
 };
 

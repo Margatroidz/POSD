@@ -221,9 +221,10 @@
 	"Vistors.h"
 	"Media.h"
 
-1477968300 c:\users\mystia\desktop\posd\include\media.h
+1477971694 c:\users\mystia\desktop\posd\include\media.h
 	"Shapes.h"
 	<vector>
+	<sstream>
 
 1477967870 source:c:\users\mystia\desktop\posd\src\media.cpp
 	"Media.h"
@@ -236,7 +237,7 @@
 	"Media.h"
 	"Shape.h"
 
-1477968618 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
+1477971483 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
 	<vector>
@@ -415,7 +416,7 @@
 1477967870 source:c:\users\mystia\desktop\posd\src\combomediabuilder.cpp
 	"Media.h"
 
-1477968363 source:c:\users\mystia\desktop\posd\src\descriptionvisitor.cpp
+1477971847 source:c:\users\mystia\desktop\posd\src\descriptionvisitor.cpp
 	"Media.h"
 
 1477967870 source:c:\users\mystia\desktop\posd\src\perimetervisitor.cpp

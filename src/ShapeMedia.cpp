@@ -40,3 +40,8 @@ void ShapeMedia :: Accept(DescriptionVisitor* visitor)
 {
     visitor->Visit(this);
 }
+
+void ShapeMedia :: RemoveMedia(Media* media)
+{
+    return;
+}

@@ -17,6 +17,7 @@ public:
     virtual void Accept(AreaVisitor* visitor) = 0;
     virtual void Accept(PerimeterVisitor* visitor) = 0;
     virtual void Accept(DescriptionVisitor* visitor) = 0;
+    virtual void RemoveMedia(Media* media) = 0;
 };
 
 class ComboMedia : public Media
@@ -27,8 +28,8 @@ public:
     void Accept(AreaVisitor* visitor);
     void Accept(PerimeterVisitor* visitor);
     void Accept(DescriptionVisitor* visitor);
-    void Add(Media* media);
     void RemoveMedia(Media* media);
+    void Add(Media* media);
 private:
     vector<Media*> _medias;
 };
@@ -41,6 +42,7 @@ public:
     void Accept(AreaVisitor* visitor);
     void Accept(PerimeterVisitor* visitor);
     void Accept(DescriptionVisitor* visitor);
+    void RemoveMedia(Media* media);
     double Area();
     double Perimeter();
     string Description();
@@ -56,6 +58,7 @@ public:
     void Accept(AreaVisitor* visitor);
     void Accept(PerimeterVisitor* visitor);
     void Accept(DescriptionVisitor* visitor);
+    void RemoveMedia(Media* media);
     string Text();
 private:
     Rectangle* _rectangle;

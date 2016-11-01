@@ -146,7 +146,11 @@ TEST(ComboMediaBuilderTest, ComboMediaBuilder)
     cMB3->BuildShapeMedia(&t1);
 
     DescriptionVisitor* dv = new DescriptionVisitor();
-    cMB3->GetMedia()->Accept(dv);
+    try{
+        cMB3->GetMedia()->Accept(dv);
+    }catch( const char* e ){
+        std::cout << e << endl;
+    }
     CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) )r(0 0 25 20) )t(0 20 16 32 25 20) )") == 0);
 
     delete cMB;
@@ -196,7 +200,7 @@ TEST(RemoveMediaTest, RemoveMedia)
     CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) )r(0 0 25 20) )t(0 20 16 32 25 20) )") == 0);
     delete dv;
 
-    cMB2->RemoveMedia(r);
+    cMB3->RemoveMedia(r);
     dv = new DescriptionVisitor();
     cMB3->GetMedia()->Accept(dv);
     CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) ))t(0 20 16 32 25 20) )") == 0);

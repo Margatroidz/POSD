@@ -23,6 +23,11 @@ void TextMedia :: Accept(DescriptionVisitor* visitor)
 {
 }
 
+void TextMedia :: RemoveMedia(Media* media)
+{
+    return;
+}
+
 string TextMedia :: Text()
 {
     return _text;

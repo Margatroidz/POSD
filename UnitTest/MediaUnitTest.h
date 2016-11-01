@@ -153,7 +153,9 @@ TEST(ComboMediaBuilderTest, ComboMediaBuilder)
 
 TEST(TextMediaTest, TextMedia)
 {
-    //Last
+    TextMedia* tm = new TextMedia(new Rectangle(Point_t{0, 0}, 10, 3), "Hello !");
+
+    CHECK(strcmp(tm->Text().c_str(), "Hello !") == 0);
 }
 
 TEST(RemoveMediaTest, RemoveMedia)
@@ -181,9 +183,14 @@ TEST(RemoveMediaTest, RemoveMedia)
     cMB3->BuildComboMedia();
     cMB3->BuildShapeMedia(cMB2->GetMedia());
     cMB3->BuildShapeMedia(new Triangle(Point_t{0, 20}, Point_t{16, 32}, Point_t{25, 20}));
-    cMB2->RemoveMedia(r);
 
     DescriptionVisitor* dv = new DescriptionVisitor();
+    cMB3->GetMedia()->Accept(dv);
+    CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) )r(0 0 25 20) )t(0 20 16 32 25 20) )") == 0);
+    delete dv;
+
+    cMB2->RemoveMedia(r);
+    dv = new DescriptionVisitor();
     cMB3->GetMedia()->Accept(dv);
     CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) ))t(0 20 16 32 25 20) )") == 0);
 

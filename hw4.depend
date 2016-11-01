@@ -63,7 +63,7 @@
 1475558702 source:c:\users\mystia\downloads\105598010_hw2\src\triangle.cpp
 	"Triangle.h"
 
-1476428887 source:c:\users\mystia\desktop\posd\main.cpp
+1477967870 source:c:\users\mystia\desktop\posd\main.cpp
 	<iostream>
 	"cppunitlite/TestHarness.h"
 	"UnitTest/MediaUnitTest.h"
@@ -71,62 +71,65 @@
 	<stdio.h>
 	<stdlib.h>
 
-1475549590 c:\users\mystia\desktop\posd\cppunitlite\testharness.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\testharness.h
 	"Test.h"
 	"TestResult.h"
 	"Failure.h"
 	"TestRegistry.h"
 
-1475549590 c:\users\mystia\desktop\posd\cppunitlite\test.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\test.h
 	<cmath>
 	"SimpleString.h"
 
-1475549590 c:\users\mystia\desktop\posd\cppunitlite\simplestring.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\simplestring.h
 
-1475549591 c:\users\mystia\desktop\posd\cppunitlite\testresult.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\testresult.h
 
-1475549589 c:\users\mystia\desktop\posd\cppunitlite\failure.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\failure.h
 	"SimpleString.h"
 
-1475549590 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
+1477967870 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
 
 1476351190 c:\users\mystia\desktop\posd\unittest\unittest.h
 	"Shapes.h"
 	<vector>
 	<string.h>
 
-1476351175 c:\users\mystia\desktop\posd\include\shapes.h
+1477967870 c:\users\mystia\desktop\posd\include\shapes.h
 	"Shape.h"
 	"Circle.h"
 	"Rectangle.h"
 	"Triangle.h"
 
-1475731499 c:\users\mystia\desktop\posd\include\shape.h
+1477967870 c:\users\mystia\desktop\posd\include\shape.h
 	<algorithm>
 	<vector>
 	<string>
 	<math.h>
 	<stdlib.h>
 
-1476352070 c:\users\mystia\desktop\posd\include\circle.h
+1477967870 c:\users\mystia\desktop\posd\include\circle.h
 	"Shape.h"
 
-1476351964 c:\users\mystia\desktop\posd\include\rectangle.h
+1477967870 c:\users\mystia\desktop\posd\include\rectangle.h
 	"Shape.h"
 
-1476352022 c:\users\mystia\desktop\posd\include\triangle.h
+1477967870 c:\users\mystia\desktop\posd\include\triangle.h
 	"Shape.h"
 
-1476352052 source:c:\users\mystia\desktop\posd\src\circle.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\circle.cpp
 	"Circle.h"
+	<sstream>
 
-1476351980 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
 	"Rectangle.h"
+	<sstream>
 
-1476352011 source:c:\users\mystia\desktop\posd\src\triangle.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\triangle.cpp
 	"Triangle.h"
+	<sstream>
 
-1475731507 source:c:\users\mystia\desktop\posd\src\shape.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\shape.cpp
 	"Shape.h"
 
 1475745014 c:\users\mystia\desktop\posd\include\comboshape.h
@@ -210,7 +213,7 @@
 	"Triangle.h"
 	<sstream>
 
-1476434093 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
 	"Media.h"
 
 1476432108 c:\users\mystia\desktop\posd\include\combomedia.h
@@ -218,28 +221,29 @@
 	"Vistors.h"
 	"Media.h"
 
-1476434699 c:\users\mystia\desktop\posd\include\media.h
+1477968300 c:\users\mystia\desktop\posd\include\media.h
 	"Shapes.h"
-	"vector"
+	<vector>
 
-1476434157 source:c:\users\mystia\desktop\posd\src\media.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\media.cpp
 	"Media.h"
 
-1476434322 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
 	"Media.h"
+	<iostream>
 
 1476430357 c:\users\mystia\desktop\posd\include\shapemedia.h
 	"Media.h"
 	"Shape.h"
 
-1476434777 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
+1477968618 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
 	<vector>
 	<string.h>
-	"iostream"
+	<iostream>
 
-1476428939 c:\users\mystia\desktop\posd\unittest\shapeunittest.h
+1477967870 c:\users\mystia\desktop\posd\unittest\shapeunittest.h
 	"Shapes.h"
 	<vector>
 	<string.h>
@@ -247,13 +251,13 @@
 1476432132 c:\users\mystia\desktop\posd\include\mediavisitor.h
 	"Medias.h"
 
-1476434856 source:c:\users\mystia\desktop\posd\src\areavisitor.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\areavisitor.cpp
 	"Media.h"
 
 1476431471 c:\users\mystia\desktop\posd\include\areavisitor.h
 	"MediaVisitor.h"
 
-1476433614 source:c:\users\mystia\desktop\posd\src\mediavisitor.cpp
+1477967870 source:c:\users\mystia\desktop\posd\src\mediavisitor.cpp
 	"Media.h"
 
 1476431223 c:\users\mystia\desktop\posd\include\medias.h
@@ -360,7 +364,7 @@
 1476536940 source:d:\download\posdo\src\perimetervisitor.cpp
 	"Media.h"
 
-1477849896 d:\download\posd\unittest\mediaunittest.h
+1477880533 d:\download\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
 	<vector>
@@ -398,13 +402,29 @@
 1477843740 source:d:\download\posd\src\descriptionvisitor.cpp
 	"Media.h"
 
-1477849434 source:d:\download\posd\src\combomediabuilder.cpp
+1477849908 source:d:\download\posd\src\combomediabuilder.cpp
 	"Media.h"
 
 1477849149 source:d:\download\posd\src\shapemediabuilder.cpp
 	"Media.h"
 
 1477849859 source:d:\download\posd\src\textmedia.cpp
+	"Media.h"
+	"Media.h"
+
+1477967870 source:c:\users\mystia\desktop\posd\src\combomediabuilder.cpp
+	"Media.h"
+
+1477968363 source:c:\users\mystia\desktop\posd\src\descriptionvisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\desktop\posd\src\perimetervisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\desktop\posd\src\shapemediabuilder.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\desktop\posd\src\textmedia.cpp
 	"Media.h"
 	"Media.h"
 

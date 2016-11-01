@@ -106,7 +106,6 @@ public:
     string Description() const;
 private:
     vector<int> _remainCombo;
-    vector<string> _subDescription;
     string _description;
     void CompleteCombo(int size);
 };

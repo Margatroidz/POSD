@@ -428,3 +428,227 @@
 	"Media.h"
 	"Media.h"
 
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\simplestring.h
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\testresult.h
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\failure.h
+	"SimpleString.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\cppunitlite\testregistry.h
+
+1477968618 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\unittest\mediaunittest.h
+	"Media.h"
+	"Shapes.h"
+	<vector>
+	<string.h>
+	<iostream>
+
+1477970102 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\media.h
+	"Shapes.h"
+	<vector>
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\shape.h
+	<algorithm>
+	<vector>
+	<string>
+	<math.h>
+	<stdlib.h>
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\circle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\rectangle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\include\triangle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\unittest\shapeunittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\areavisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\circle.cpp
+	"Circle.h"
+	<sstream>
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\combomedia.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\combomediabuilder.cpp
+	"Media.h"
+
+1477970189 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\descriptionvisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\media.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\mediavisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\perimetervisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\shape.cpp
+	"Shape.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\shapemedia.cpp
+	"Media.h"
+	<iostream>
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\shapemediabuilder.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\textmedia.cpp
+	"Media.h"
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\832a57ffba388c00b10175fd307eadad\src\triangle.cpp
+	"Triangle.h"
+	<sstream>
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
+	<stdio.h>
+	<stdlib.h>
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\testharness.h
+	"Test.h"
+	"TestResult.h"
+	"Failure.h"
+	"TestRegistry.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\test.h
+	<cmath>
+	"SimpleString.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\simplestring.h
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\testresult.h
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\failure.h
+	"SimpleString.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\cppunitlite\testregistry.h
+
+1477970850 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\unittest\mediaunittest.h
+	"Media.h"
+	"Shapes.h"
+	<vector>
+	<string.h>
+	<iostream>
+
+1477970102 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\media.h
+	"Shapes.h"
+	<vector>
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\shapes.h
+	"Shape.h"
+	"Circle.h"
+	"Rectangle.h"
+	"Triangle.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\shape.h
+	<algorithm>
+	<vector>
+	<string>
+	<math.h>
+	<stdlib.h>
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\circle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\rectangle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\include\triangle.h
+	"Shape.h"
+
+1477967870 c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\unittest\shapeunittest.h
+	"Shapes.h"
+	<vector>
+	<string.h>
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\areavisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\circle.cpp
+	"Circle.h"
+	<sstream>
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\combomedia.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\combomediabuilder.cpp
+	"Media.h"
+
+1477970818 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\descriptionvisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\media.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\mediavisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\perimetervisitor.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\rectangle.cpp
+	"Rectangle.h"
+	<sstream>
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\shape.cpp
+	"Shape.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\shapemedia.cpp
+	"Media.h"
+	<iostream>
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\shapemediabuilder.cpp
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\textmedia.cpp
+	"Media.h"
+	"Media.h"
+
+1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\triangle.cpp
+	"Triangle.h"
+	<sstream>
+

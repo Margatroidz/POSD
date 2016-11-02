@@ -29,7 +29,7 @@ void ComboMedia :: Accept(PerimeterVisitor* visitor)
 
 void ComboMedia :: Accept(DescriptionVisitor* visitor)
 {
-    visitor->AddCombo(_medias.size());
+    visitor->AddCombo();
     for(Media* media : _medias)
         media->Accept(visitor);
     visitor->CompleteCombo();

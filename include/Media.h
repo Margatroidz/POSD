@@ -105,13 +105,11 @@ public:
     virtual ~DescriptionVisitor();
     void Visit(ShapeMedia* shapeMedia);
     void Visit(ComboMedia* comboMedia);
-    void AddCombo(int amount);
+    void AddCombo();
     void CompleteCombo();
     string Description() const;
 private:
-    vector<int> _remainCombo;
     stringstream _descriptionStream;
-    void CompleteCombo(int size);
 };
 
 class MediaBuilder

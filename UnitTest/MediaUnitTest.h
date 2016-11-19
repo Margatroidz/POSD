@@ -2,6 +2,7 @@
 #define UNITTEST_H_INCLUDED
 #include "Media.h"
 #include "Shapes.h"
+#include "Document.h"
 #include <vector>
 #include <string.h>
 #define THRESH_HLOD 0.00001
@@ -100,10 +101,12 @@ TEST(PerimeterVisitorTest, PerimeterVisitor)
 TEST(ShapeMediaBuilderTest, ShapeMediaBuilder)
 {
     ShapeMediaBuilder* sMB = new ShapeMediaBuilder();
-    try{
+    try
+    {
         sMB->BuildComboMedia();
         FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
-    }catch(const char* e)
+    }
+    catch(const char* e)
     {
         CHECK(strcmp("can't build combo !", e) == 0);
     }
@@ -120,11 +123,13 @@ TEST(ShapeMediaBuilderTest, ShapeMediaBuilder)
 TEST(ComboMediaBuilderTest, ComboMediaBuilder)
 {
     ComboMediaBuilder* cMB = new ComboMediaBuilder();
-    try{
+    try
+    {
         Shape* s = 0;
         cMB->BuildShapeMedia(s);
         FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
-    }catch(const char* e)
+    }
+    catch(const char* e)
     {
         CHECK(strcmp("need a combo !", e) == 0);
     }
@@ -146,9 +151,12 @@ TEST(ComboMediaBuilderTest, ComboMediaBuilder)
     cMB3->BuildShapeMedia(&t1);
 
     DescriptionVisitor* dv = new DescriptionVisitor();
-    try{
+    try
+    {
         cMB3->GetMedia()->Accept(dv);
-    }catch( const char* e ){
+    }
+    catch( const char* e )
+    {
         std::cout << e << endl;
     }
     CHECK(strcmp(dv->Description().c_str(), "combo(combo(combo(r(10 0 15 5) c(12 5 2) )r(0 0 25 20) )t(0 20 16 32 25 20) )") == 0);
@@ -169,11 +177,13 @@ TEST(TextMediaTest, TextMedia)
 TEST(RemoveMediaTest, RemoveMedia)
 {
     ComboMediaBuilder* cMB = new ComboMediaBuilder();
-    try{
+    try
+    {
         Shape* s = 0;
         cMB->BuildShapeMedia(s);
         FAIL("ShapeMediaBuilder -> BuildComboMedia ERROR");
-    }catch(const char* e)
+    }
+    catch(const char* e)
     {
         CHECK(strcmp("need a combo !", e) == 0);
     }
@@ -209,6 +219,25 @@ TEST(RemoveMediaTest, RemoveMedia)
     delete cMB2;
     delete cMB3;
     delete dv;
+}
+
+TEST(DocumentTest, Document)
+{
+    Document* ab = new MyDocument();
+    const char* result = ab->openDocument("test.txt").c_str();
+    CHECK(strcmp(result, "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
+    delete ab;
+}
+
+TEST(MediaDirectorTest, MediaDirector)
+{
+    Document* a = new MyDocument();
+    MediaDirector b;
+    b.concrete(a->openDocument("test.txt"));
+    DescriptionVisitor dv;
+    b.GetMedia()->Accept(&dv);
+    CHECK(strcmp(dv.Description().c_str(), "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
+    delete a;
 }
 
 #endif // UNITTEST_H_INCLUDED

@@ -2,6 +2,7 @@
 #define MEDIA_H
 #include "Shapes.h"
 #include <vector>
+#include <stack>
 #include <sstream>
 
 using namespace std;
@@ -147,5 +148,18 @@ private:
     ComboMedia* _combo;
     vector<Media*> _shapesTemp;
 };
+
+class MediaDirector
+{
+public :
+    void setMediaBuilder(std::stack<ComboMediaBuilder *> *mbs);
+    void concrete(string content);
+    Media* GetMedia();
+private :
+    std::stack<ComboMediaBuilder *> *mb = new stack<ComboMediaBuilder *>;
+    float ReadFloat(const char* input, int& position);
+    Media* media;
+};
+
 
 #endif // MEDIA_H

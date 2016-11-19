@@ -43,6 +43,7 @@
 		<Unit filename="UnitTest/MediaUnitTest.h" />
 		<Unit filename="UnitTest/ShapeUnitTest.h" />
 		<Unit filename="include/Circle.h" />
+		<Unit filename="include/Document.h" />
 		<Unit filename="include/Media.h" />
 		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Shape.h" />
@@ -56,7 +57,9 @@
 		<Unit filename="src/ComboMedia.cpp" />
 		<Unit filename="src/ComboMediaBuilder.cpp" />
 		<Unit filename="src/DescriptionVisitor.cpp" />
+		<Unit filename="src/Document.cpp" />
 		<Unit filename="src/Media.cpp" />
+		<Unit filename="src/MediaDirector.cpp" />
 		<Unit filename="src/MediaVisitor.cpp" />
 		<Unit filename="src/PerimeterVisitor.cpp" />
 		<Unit filename="src/Rectangle.cpp" />

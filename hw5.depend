@@ -365,16 +365,19 @@
 1476536940 source:d:\download\posdo\src\perimetervisitor.cpp
 	"Media.h"
 
-1477880533 d:\download\posd\unittest\mediaunittest.h
+1479488684 d:\download\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
+	"Document.h"
 	<vector>
 	<string.h>
 	<iostream>
 
-1477849863 d:\download\posd\include\media.h
+1479486459 d:\download\posd\include\media.h
 	"Shapes.h"
 	<vector>
+	<stack>
+	<sstream>
 
 1476800343 d:\download\posd\unittest\shapeunittest.h
 	"Shapes.h"
@@ -384,7 +387,7 @@
 1477840180 source:d:\download\posd\src\areavisitor.cpp
 	"Media.h"
 
-1477848716 source:d:\download\posd\src\combomedia.cpp
+1479473476 source:d:\download\posd\src\combomedia.cpp
 	"Media.h"
 
 1476800344 source:d:\download\posd\src\mediavisitor.cpp
@@ -393,14 +396,14 @@
 1477840176 source:d:\download\posd\src\perimetervisitor.cpp
 	"Media.h"
 
-1477839356 source:d:\download\posd\src\shapemedia.cpp
+1478002657 source:d:\download\posd\src\shapemedia.cpp
 	"Media.h"
 	<iostream>
 
 1476808047 source:d:\download\posd\src\media.cpp
 	"Media.h"
 
-1477843740 source:d:\download\posd\src\descriptionvisitor.cpp
+1479473476 source:d:\download\posd\src\descriptionvisitor.cpp
 	"Media.h"
 
 1477849908 source:d:\download\posd\src\combomediabuilder.cpp
@@ -409,7 +412,7 @@
 1477849149 source:d:\download\posd\src\shapemediabuilder.cpp
 	"Media.h"
 
-1477849859 source:d:\download\posd\src\textmedia.cpp
+1478002657 source:d:\download\posd\src\textmedia.cpp
 	"Media.h"
 	"Media.h"
 
@@ -652,4 +655,15 @@
 1477967870 source:c:\users\mystia\downloads\275d32ca26cc84f830b0f2aab0c0b7d8\src\triangle.cpp
 	"Triangle.h"
 	<sstream>
+
+1479484587 d:\download\posd\include\document.h
+	<fstream>
+
+1479487892 source:d:\download\posd\src\document.cpp
+	"Document.h"
+	<fstream>
+
+1479487425 source:d:\download\posd\src\mediadirector.cpp
+	"Media.h"
+	<iostream>
 

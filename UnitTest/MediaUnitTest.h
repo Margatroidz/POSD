@@ -223,7 +223,6 @@ TEST(RemoveMediaTest, RemoveMedia)
 
 TEST(DocumentTest, Document)
 {
-<<<<<<< HEAD
     Document* doc = new MyDocument();
     const char* result = doc->openDocument("test.txt").c_str();
     CHECK(strcmp(result, "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
@@ -238,17 +237,10 @@ TEST(DocumentTest, Document)
         CHECK(strcmp(ex.c_str(), "file is not existed.") == 0);
     }
     delete doc;
-=======
-    Document* ab = new MyDocument();
-    const char* result = ab->openDocument("test.txt").c_str();
-    CHECK(strcmp(result, "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
-    delete ab;
->>>>>>> origin/master
 }
 
 TEST(MediaDirectorTest, MediaDirector)
 {
-<<<<<<< HEAD
     Document* doc = new MyDocument();
     MediaDirector dir;
     dir.concrete(doc->openDocument("test.txt"));
@@ -256,15 +248,6 @@ TEST(MediaDirectorTest, MediaDirector)
     dir.GetMedia()->Accept(&dv);
     CHECK(strcmp(dv.Description().c_str(), "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
     delete doc;
-=======
-    Document* a = new MyDocument();
-    MediaDirector b;
-    b.concrete(a->openDocument("test.txt"));
-    DescriptionVisitor dv;
-    b.GetMedia()->Accept(&dv);
-    CHECK(strcmp(dv.Description().c_str(), "combo(r(0 0 3 2) c(0 0 5) combo(r(0 0 5 4) c(0 0 10) )combo(r(0 1 8 7) c(0 1 10) ))") == 0);
-    delete a;
->>>>>>> origin/master
 }
 
 #endif // UNITTEST_H_INCLUDED

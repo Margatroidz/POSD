@@ -669,6 +669,7 @@
 	"Media.h"
 	<iostream>
 
+<<<<<<< HEAD:hw5.depend
 1480401171 c:\users\mystia\desktop\posd\include\document.h
 	<fstream>
 
@@ -680,3 +681,5 @@
 	"Media.h"
 	<iostream>
 
+=======
+>>>>>>> origin/master:hw5.depend

@@ -7,11 +7,6 @@ ComboMediaBuilder :: ComboMediaBuilder() : _combo(NULL)
 
 ComboMediaBuilder :: ~ComboMediaBuilder()
 {
-    for(unsigned int i = 0; i < _shapesTemp.size(); i ++){
-        delete _shapesTemp[_shapesTemp.size() - 1];
-        _shapesTemp.pop_back();
-    }
-    delete _combo;
 }
 
 void ComboMediaBuilder :: BuildComboMedia()

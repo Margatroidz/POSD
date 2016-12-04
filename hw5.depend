@@ -138,13 +138,14 @@
 1475731527 source:c:\users\mystia\desktop\posd\src\comboshape.cpp
 	"ComboShape.h"
 
-1476800344 source:d:\download\posd\main.cpp
+1480815107 source:d:\download\posd\main.cpp
 	<iostream>
 	"cppunitlite/TestHarness.h"
 	"UnitTest/MediaUnitTest.h"
 	"UnitTest/ShapeUnitTest.h"
 	<stdio.h>
 	<stdlib.h>
+	<map>
 
 1476800343 d:\download\posd\cppunitlite\testharness.h
 	"Test.h"
@@ -367,7 +368,7 @@
 1476536940 source:d:\download\posdo\src\perimetervisitor.cpp
 	"Media.h"
 
-1479488684 d:\download\posd\unittest\mediaunittest.h
+1480777740 d:\download\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
 	"Document.h"
@@ -408,10 +409,10 @@
 1479473476 source:d:\download\posd\src\descriptionvisitor.cpp
 	"Media.h"
 
-1477849908 source:d:\download\posd\src\combomediabuilder.cpp
+1480777501 source:d:\download\posd\src\combomediabuilder.cpp
 	"Media.h"
 
-1477849149 source:d:\download\posd\src\shapemediabuilder.cpp
+1480777507 source:d:\download\posd\src\shapemediabuilder.cpp
 	"Media.h"
 
 1478002657 source:d:\download\posd\src\textmedia.cpp
@@ -665,11 +666,12 @@
 	"Document.h"
 	<fstream>
 
-1479487425 source:d:\download\posd\src\mediadirector.cpp
+1480783728 source:d:\download\posd\src\mediadirector.cpp
 	"Media.h"
 	<iostream>
 
-<<<<<<< HEAD:hw5.depend
+1479487425 D:hw5.depend
+
 1480401171 c:\users\mystia\desktop\posd\include\document.h
 	<fstream>
 
@@ -681,5 +683,7 @@
 	"Media.h"
 	<iostream>
 
-=======
->>>>>>> origin/master:hw5.depend
+1480401172 
+
+1480401172 gin/master:hw5.depend
+

@@ -5,7 +5,13 @@ void MediaDirector::setMediaBuilder(std::stack<ComboMediaBuilder *> *mbs)
 {
 }
 
-Media* MediaDirector::GetMedia(){
+Media* MediaDirector::GetMedia()
+{
+    if(!mb->empty())
+    {
+        ComboMediaBuilder* cm = mb->top();
+        delete cm;
+    }
     return media;
 }
 
@@ -39,7 +45,8 @@ void MediaDirector::concrete(string content)
                 float p3 = ReadFloat(input, ++position);
                 ShapeMediaBuilder* smb = new ShapeMediaBuilder();
                 smb->BuildShapeMedia(new Circle(Point_t{p1, p2}, p3));
-                if(mb->size() == 0){
+                if(mb->size() == 0)
+                {
                     media = smb->GetMedia();
                     return;
                 }
@@ -58,7 +65,8 @@ void MediaDirector::concrete(string content)
                 float p4 = ReadFloat(input, ++position);
                 ShapeMediaBuilder* smb = new ShapeMediaBuilder();
                 smb->BuildShapeMedia(new Rectangle(Point_t{p1, p2}, p3, p4));
-                if(mb->size() == 0){
+                if(mb->size() == 0)
+                {
                     media = smb->GetMedia();
                     return;
                 }
@@ -77,7 +85,8 @@ void MediaDirector::concrete(string content)
                 float p6 = ReadFloat(input, ++position);
                 ShapeMediaBuilder* smb = new ShapeMediaBuilder();
                 smb->BuildShapeMedia(new Triangle(Point_t{p1, p2}, Point_t{p3, p4}, Point_t{p5, p6}));
-                if(mb->size() == 0){
+                if(mb->size() == 0)
+                {
                     media = smb->GetMedia();
                     return;
                 }
@@ -93,6 +102,7 @@ void MediaDirector::concrete(string content)
                     ComboMediaBuilder* cm = mb->top();
                     mb->pop();
                     mb->top()->BuildShapeMedia(cm->GetMedia());
+                    delete cm;
                 }
             }
             else throw "error format";

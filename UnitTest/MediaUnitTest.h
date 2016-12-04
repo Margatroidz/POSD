@@ -110,8 +110,8 @@ TEST(ShapeMediaBuilderTest, ShapeMediaBuilder)
     {
         CHECK(strcmp("can't build combo !", e) == 0);
     }
-
-    sMB->BuildShapeMedia(new Circle(Point_t{0, 0}, 5));
+    Circle c(Point_t{0, 0}, 5);
+    sMB->BuildShapeMedia(&c);
     Media* m = sMB->GetMedia();
     ShapeMedia* sm = (ShapeMedia*)m;
     DOUBLES_EQUAL(78.539815, sm->Area(), THRESH_HLOD);

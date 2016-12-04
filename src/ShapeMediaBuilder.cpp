@@ -6,7 +6,6 @@ ShapeMediaBuilder :: ShapeMediaBuilder() : _shape(NULL)
 
 ShapeMediaBuilder :: ~ShapeMediaBuilder()
 {
-    delete _shape;
 }
 
 void ShapeMediaBuilder :: BuildComboMedia()

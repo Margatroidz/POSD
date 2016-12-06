@@ -1,0 +1,30 @@
+def cSmall = Circle(2,1,1)
+def rTall = Rectangle(1,10,2,8)
+rTall.area?
+def comboExclamation = Combo{rTall,cSmall}
+comboExclamation.perimeter?
+show
+def cMale = Circle(3,2,1)
+add cMale to comboExclamation
+comboExclamation.perimeter?
+delete rTall from comboExclamation
+comboExclamation.perimeter?
+delete rTall
+show
+
+def cSmall = Circle(2,1,1)
+def rTall = Rectangle(1,10,2,8)
+def comboExclamation = Combo{rTall,cSmall}
+delete rTall from comboExclamation
+def cMale = Circle(3,2,1)
+add cMale to comboExclamation
+save "ztx9.txt"
+
+load "ztx9.txt"
+
+def cSmall = Circle(2,1,1)
+def rTall = Rectangle(1,10,2,8)
+def comboExclamation = Combo{rTall,cSmall}
+def cMale = Circle(3,2,1)
+add cMale to comboExclamation
+save

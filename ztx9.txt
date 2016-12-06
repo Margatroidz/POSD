@@ -1,0 +1,8 @@
+c(3 2 1) 
+cMale
+c(2 1 1) 
+cSmall
+combo(c(2 1 1) c(3 2 1) )
+comboExclamation{cSmall cMale }
+r(1 10 2 8) 
+rTall

@@ -2,24 +2,48 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="UnitTest\MediaUnitTest.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\ComboMediaBuilder.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5158" topLine="203" />
+			<Cursor1 position="133" topLine="0" />
 		</Cursor>
+	</File>
+	<File name="UnitTest\ShapeUnitTest.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="73" />
+		</Cursor>
+	</File>
+	<File name="include\Media.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="468" topLine="126" />
+		</Cursor>
+	</File>
+	<File name="src\Document.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="543" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16580" topLine="320" />
+		</Cursor>
+		<Folding>
+			<Collapse line="193" />
+			<Collapse line="217" />
+			<Collapse line="262" />
+			<Collapse line="295" />
+			<Collapse line="438" />
+			<Collapse line="457" />
+			<Collapse line="517" />
+		</Folding>
 	</File>
 	<File name="src\ShapeMediaBuilder.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="131" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\ComboMediaBuilder.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UnitTest\MediaUnitTest.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="133" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Media.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="468" topLine="0" />
+			<Cursor1 position="5158" topLine="214" />
 		</Cursor>
 	</File>
 	<File name="include\Triangle.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -27,24 +51,14 @@
 			<Cursor1 position="76" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\MediaDirector.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4299" topLine="3" />
+			<Cursor1 position="1323" topLine="88" />
 		</Cursor>
 	</File>
-	<File name="src\MediaDirector.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Document.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1323" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="UnitTest\ShapeUnitTest.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="137" />
-		</Cursor>
-	</File>
-	<File name="src\ComboMedia.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="1" />
+			<Cursor1 position="510" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

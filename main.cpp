@@ -104,6 +104,7 @@ void Save(char* input, map<string, MediaInfo*> &container)
     char* pch = strtok(input, quotes);
     pch = strtok(NULL, quotes);
 
+    if(pch == NULL || *pch == '\0') throw "illegal file name";
     fstream file(pch, ifstream::out);
     for(map<string, MediaInfo*>::iterator it = container.begin() ; it != container.end() ; ++it)
     {
@@ -165,7 +166,7 @@ void Load(char* input, map<string, MediaInfo*> &container)
             defBuffer.push_back(defBuf);
         }
     }
-    int lastRemain = defBuffer.size();
+    unsigned int lastRemain = defBuffer.size();
     while(!defBuffer.empty())
     {
         for(vector<char*>::iterator it = defBuffer.begin(); it != defBuffer.end();)

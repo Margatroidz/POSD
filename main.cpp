@@ -103,10 +103,12 @@ void Save(char* input, map<string, MediaInfo*> &container)
     const char* space = " ";
     const char* quotes = "\"";
     char* pch = strtok(input, space);
+    char* name = new char[512];
 
     pch = strtok(NULL, space);
     if(container.find(pch) == container.end()) throw "illegal shape !";
     if(!container.find(pch)->second->isCombo) throw "have to be a combo !";
+    strcpy(name, pch);
     MediaInfo* mi = container[pch];
 
     pch = strtok(NULL, space);
@@ -121,6 +123,7 @@ void Save(char* input, map<string, MediaInfo*> &container)
     file << dv.Description() << endl;
     file << mi->def << endl;
     file.close();
+    printf(">> %s to \"%s\"\n", name, pch);
 }
 void Load(char* input, map<string, MediaInfo*> &container)
 {
@@ -139,17 +142,22 @@ void Load(char* input, map<string, MediaInfo*> &container)
     string buffer;
     char* line1 = new char[512];
     char* line2 = new char[512];
+    char* line3 = new char[512];
+    char* line4 = new char[512];
     char* shape = new char[512];
     char* name = new char[512];
     char* temp = new char[512];
     char* temp2 = new char[512];
+
+    printf(">> loading %s ...\n", pch);
     fstream file(pch, ifstream::in);
     if(!file.is_open()) throw "file can't not found !";
-
     getline(file, buffer);
     strcpy(line1, buffer.c_str());
+    strcpy(line3, buffer.c_str());
     getline(file, buffer);
     strcpy(line2, buffer.c_str());
+    strcpy(line4, buffer.c_str());
     if(getline(file, buffer)) throw "illegal format !";
     file.close();
 
@@ -190,9 +198,12 @@ void Load(char* input, map<string, MediaInfo*> &container)
     LoadToDef(temp2, tempPosition);
     string comment = "def " + string(temp) + " = Combo" + string(temp2);
     ExtractShape(comment.c_str(), 4, container);
+    printf("%s = %s = %s\n", temp, line4, line3);
 
     delete[] line1;
     delete[] line2;
+    delete[] line3;
+    delete[] line4;
     delete[] shape;
     delete[] name;
     delete[] temp;

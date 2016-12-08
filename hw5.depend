@@ -97,41 +97,41 @@
 	<vector>
 	<string.h>
 
-1480990376 c:\users\mystia\desktop\posd\include\shapes.h
+1481192592 c:\users\mystia\desktop\posd\include\shapes.h
 	"Shape.h"
 	"Circle.h"
 	"Rectangle.h"
 	"Triangle.h"
 
-1480990376 c:\users\mystia\desktop\posd\include\shape.h
+1481192592 c:\users\mystia\desktop\posd\include\shape.h
 	<algorithm>
 	<vector>
 	<string>
 	<math.h>
 	<stdlib.h>
 
-1480990376 c:\users\mystia\desktop\posd\include\circle.h
+1481192592 c:\users\mystia\desktop\posd\include\circle.h
 	"Shape.h"
 
-1480990376 c:\users\mystia\desktop\posd\include\rectangle.h
+1481192592 c:\users\mystia\desktop\posd\include\rectangle.h
 	"Shape.h"
 
-1480990376 c:\users\mystia\desktop\posd\include\triangle.h
+1481192592 c:\users\mystia\desktop\posd\include\triangle.h
 	"Shape.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\circle.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\circle.cpp
 	"Circle.h"
 	<sstream>
 
-1480990376 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\rectangle.cpp
 	"Rectangle.h"
 	<sstream>
 
-1480990377 source:c:\users\mystia\desktop\posd\src\triangle.cpp
+1481192979 source:c:\users\mystia\desktop\posd\src\triangle.cpp
 	"Triangle.h"
 	<sstream>
 
-1480990377 source:c:\users\mystia\desktop\posd\src\shape.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\shape.cpp
 	"Shape.h"
 
 1475745014 c:\users\mystia\desktop\posd\include\comboshape.h
@@ -216,7 +216,7 @@
 	"Triangle.h"
 	<sstream>
 
-1480990376 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\combomedia.cpp
 	"Media.h"
 
 1476432108 c:\users\mystia\desktop\posd\include\combomedia.h
@@ -224,16 +224,16 @@
 	"Vistors.h"
 	"Media.h"
 
-1480990376 c:\users\mystia\desktop\posd\include\media.h
+1481192592 c:\users\mystia\desktop\posd\include\media.h
 	"Shapes.h"
 	<vector>
 	<stack>
 	<sstream>
 
-1480990376 source:c:\users\mystia\desktop\posd\src\media.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\media.cpp
 	"Media.h"
 
-1480990377 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\shapemedia.cpp
 	"Media.h"
 	<iostream>
 
@@ -257,13 +257,13 @@
 1476432132 c:\users\mystia\desktop\posd\include\mediavisitor.h
 	"Medias.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\areavisitor.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\areavisitor.cpp
 	"Media.h"
 
 1476431471 c:\users\mystia\desktop\posd\include\areavisitor.h
 	"MediaVisitor.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\mediavisitor.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\mediavisitor.cpp
 	"Media.h"
 
 1476431223 c:\users\mystia\desktop\posd\include\medias.h
@@ -421,19 +421,19 @@
 	"Media.h"
 	"Media.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\combomediabuilder.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\combomediabuilder.cpp
 	"Media.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\descriptionvisitor.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\descriptionvisitor.cpp
 	"Media.h"
 
-1480990376 source:c:\users\mystia\desktop\posd\src\perimetervisitor.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\perimetervisitor.cpp
 	"Media.h"
 
-1480990377 source:c:\users\mystia\desktop\posd\src\shapemediabuilder.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\shapemediabuilder.cpp
 	"Media.h"
 
-1480990377 source:c:\users\mystia\desktop\posd\src\textmedia.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\textmedia.cpp
 	"Media.h"
 	"Media.h"
 
@@ -674,14 +674,14 @@
 
 1479487425 D:hw5.depend
 
-1480990376 c:\users\mystia\desktop\posd\include\document.h
+1481192592 c:\users\mystia\desktop\posd\include\document.h
 	<fstream>
 
-1480990376 source:c:\users\mystia\desktop\posd\src\document.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\document.cpp
 	"Document.h"
 	<fstream>
 
-1480990376 source:c:\users\mystia\desktop\posd\src\mediadirector.cpp
+1481192593 source:c:\users\mystia\desktop\posd\src\mediadirector.cpp
 	"Media.h"
 	<iostream>
 

@@ -22,13 +22,13 @@ void Add(char* input, map<string, MediaInfo*> &container);
 void Delete(char* input, map<string, MediaInfo*> &container);
 void Calculate(char* input, map<string, MediaInfo*> &container);
 
-void ExtractShape(char* input, int startPosition, map<string, MediaInfo*> &container);
+void ExtractShape(const char* input, int startPosition, map<string, MediaInfo*> &container);
 Media* CreateShape(char* input, map<string, MediaInfo*> &container, bool &isCombo, char* def);
 Media* CreateCombo(char* input, map<string, MediaInfo*> &container, char* def);
 float ReadFloat(const char* input, int& position);
 string ReadString(const char* input, int& position);
 void DefToSave(char* def);
-void LoadToDef(char* def, int startPosition);
+void LoadToDef(char* def, int &startPosition);
 void DeleteDef(char* def, char* target);
 void AddDef(char* def, char* target);
 
@@ -100,95 +100,103 @@ int main()
 
 void Save(char* input, map<string, MediaInfo*> &container)
 {
+    const char* space = " ";
     const char* quotes = "\"";
-    char* pch = strtok(input, quotes);
-    pch = strtok(NULL, quotes);
+    char* pch = strtok(input, space);
 
-    if(pch == NULL || *pch == '\0') throw "illegal file name";
+    pch = strtok(NULL, space);
+    if(container.find(pch) == container.end()) throw "illegal shape !";
+    if(!container.find(pch)->second->isCombo) throw "have to be a combo !";
+    MediaInfo* mi = container[pch];
+
+    pch = strtok(NULL, space);
+    if(strncmp(pch, "to", 2) != 0) throw "illegal file name !";
+
+    pch = strtok(NULL, quotes);
+    if(pch == NULL || *pch == '\0') throw "illegal file name !";
+
     fstream file(pch, ifstream::out);
-    for(map<string, MediaInfo*>::iterator it = container.begin() ; it != container.end() ; ++it)
-    {
-        DescriptionVisitor dv;
-        it->second->media->Accept(&dv);
-        file << dv.Description() << endl;
-        file << it->second->def << endl;
-    }
+    DescriptionVisitor dv;
+    mi->media->Accept(&dv);
+    file << dv.Description() << endl;
+    file << mi->def << endl;
     file.close();
 }
 void Load(char* input, map<string, MediaInfo*> &container)
 {
+    for(map<string, MediaInfo*>::iterator it = container.begin() ; it != container.end() ;)
+    {
+        char* temp = new char[256];
+        strcpy(temp, ("delete " + (it++)->first).c_str());
+        Delete(temp, container);
+        delete[] temp;
+    }
+
+    const char* space = " ";
     const char* quotes = "\"";
     char* pch = strtok(input, quotes);
-    vector<char*> defBuffer;
     pch = strtok(NULL, quotes);
     string buffer;
-    char* fuck = new char[512];
-    char* ta = new char[512];
-    char* andSuck = new char[512];
+    char* line1 = new char[512];
+    char* line2 = new char[512];
+    char* shape = new char[512];
+    char* name = new char[512];
+    char* temp = new char[512];
+    char* temp2 = new char[512];
     fstream file(pch, ifstream::in);
     if(!file.is_open()) throw "file can't not found !";
-    while(getline(file, buffer))
-    {
 
-        strcpy(fuck, buffer.c_str());
-        if(!getline(file, buffer)) throw "error format of document !";
-        strcpy(ta, buffer.c_str());
-
-        if(strncmp(fuck, "c(", 2) == 0)
-        {
-            LoadToDef(fuck, 2);
-            sprintf(andSuck, "def %s = Circle%s",ta, fuck + 1);
-            ExtractShape(andSuck, 4, container);
-        }
-        else if(strncmp(fuck, "r(", 2) == 0)
-        {
-            LoadToDef(fuck, 2);
-            sprintf(andSuck, "def %s = Rectangle%s",ta, fuck + 1);
-            ExtractShape(andSuck, 4, container);
-        }
-        else if(strncmp(fuck, "t(", 2) == 0)
-        {
-            LoadToDef(fuck, 2);
-            sprintf(andSuck, "def %s = Triangle%s",ta, fuck + 1);
-            ExtractShape(andSuck, 4, container);
-        }
-        else if(strncmp(fuck, "combo(", 6) == 0)
-        {
-            int t = 0;
-            const char* name = ReadString(ta, t).c_str();
-            strcpy(fuck, ta + strlen(name));
-            LoadToDef(fuck, 1);
-            strcpy(ta, name);
-            sprintf(andSuck, "def %s = Combo%s",ta, fuck);
-
-            char *defBuf = new char[512];
-            strcpy(defBuf, andSuck);
-            defBuffer.push_back(defBuf);
-        }
-    }
-    unsigned int lastRemain = defBuffer.size();
-    while(!defBuffer.empty())
-    {
-        for(vector<char*>::iterator it = defBuffer.begin(); it != defBuffer.end();)
-        {
-            try
-            {
-                ExtractShape(*it, 4, container);
-                delete[] *it;
-                defBuffer.erase(it);
-            }catch(...){ it++; }
-        }
-        if(lastRemain == defBuffer.size())
-        {
-            for(char* d : defBuffer) delete[] d;
-            throw "load error, please check the file !";
-        }else (lastRemain = defBuffer.size());
-    }
-
-    delete[] fuck;
-    delete[] ta;
-    delete[] andSuck;
+    getline(file, buffer);
+    strcpy(line1, buffer.c_str());
+    getline(file, buffer);
+    strcpy(line2, buffer.c_str());
+    if(getline(file, buffer)) throw "illegal format !";
     file.close();
+
+    int defPosition = 6;
+    int len = strlen(line1) - 1;
+    while(defPosition < len)
+    {
+        LoadToDef(line1, defPosition);
+        defPosition += 2;
+    }
+
+    pch = strtok(line1 + 6, space);
+    int namePosition = 0;
+    strcpy(temp, ReadString(line2, namePosition).c_str());
+    strcpy(temp2, line2 + namePosition);
+
+    while(strncmp((line2++) + namePosition, " }", 2) != 0)
+    {
+        strcpy(name, ReadString(line2, namePosition).c_str());
+        switch(pch[0])
+        {
+        case 'c':
+            strcpy(shape, "Circle");
+            break;
+        case 't':
+            strcpy(shape, "Triangle");
+            break;
+        case 'r':
+            strcpy(shape, "Rectangle");
+            break;
+        }
+        strcat(shape, pch + 1);
+        string comment = "def " + string(name) + " = " + string(shape);
+        pch = strtok(NULL, space);
+        ExtractShape(comment.c_str(), 4, container);
+    }
+    int tempPosition = 0;
+    LoadToDef(temp2, tempPosition);
+    string comment = "def " + string(temp) + " = Combo" + string(temp2);
+    ExtractShape(comment.c_str(), 4, container);
+
+    delete[] line1;
+    delete[] line2;
+    delete[] shape;
+    delete[] name;
+    delete[] temp;
+    delete[] temp2;
 }
 
 void Add(char* input, map<string, MediaInfo*> &container)
@@ -251,7 +259,11 @@ void Delete(char* input, map<string, MediaInfo*> &container)
         {
             for(map<string, MediaInfo*>::iterator it = container.begin(); it != container.end(); ++it)
             {
-                if(it->second->isCombo) it->second->media->RemoveMedia(deletedIt->second->media);
+                if(it->second->isCombo)
+                {
+                    it->second->media->RemoveMedia(deletedIt->second->media);
+                    DeleteDef(it->second->def, deletedMedia);
+                }
             }
             container.erase(deletedIt);
             delete deletedIt->second->media;
@@ -293,7 +305,7 @@ void Calculate(char* input, map<string, MediaInfo*> &container)
     }
 }
 
-void ExtractShape(char* input, int startPosition, map<string, MediaInfo*> &container)
+void ExtractShape(const char* input, int startPosition, map<string, MediaInfo*> &container)
 {
     int position = startPosition;
     char name[128] = {0};
@@ -478,19 +490,19 @@ void DefToSave(char* def)
     def[len + 1] = '\0';
 }
 
-void LoadToDef(char* def, int startPosition)
+void LoadToDef(char* def, int &startPosition)
 {
     int len = strlen(def);
-    for(int i = startPosition; i < len; i ++) if(def[i] == ' ') def[i] = ',';
-
-    int endPosition = 0;
-    for(; endPosition < len; endPosition ++) if(def[endPosition] == ')' || def[endPosition] == '}') break;
-    if(def[endPosition - 1] == ',')
+    for(; startPosition < len; startPosition ++)
     {
-        def[endPosition - 1] = def[endPosition];
-        def[endPosition] = '\0';
+        if(def[startPosition] == ')' || def[startPosition] == '}') break;
+        if(def[startPosition] == ' ') def[startPosition] = ',';
     }
-    else def[endPosition + 1] = '\0';
+    if(def[startPosition - 1] == ',')
+    {
+        def[startPosition - 1] = def[startPosition];
+        def[startPosition] = '\0';
+    }
 }
 
 void DeleteDef(char* def, char* target)

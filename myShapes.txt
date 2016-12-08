@@ -1,0 +1,2 @@
+combo(r(1 10 2 8) t(0 0 0 3 3 0) )
+comboExclamation{rTall kMall }

@@ -1,0 +1,16 @@
+def cSmall = Circle(2,1,1)
+def rTall = Rectangle(1,10,2,8)
+def comboExclamation = Combo{rTall,cSmall}
+show
+comboExclamation.area?
+cSmall.area?
+rTall.area?
+def kMall = Triangle(0,0,0,3,3,0)
+show
+kMall.area?
+add kMall to comboExclamation
+comboExclamation.area?
+delete cSmall
+comboExclamation.area?
+save comboExclamation to "myShapes.txt"
+load "myShapes.txt"

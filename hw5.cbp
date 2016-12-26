@@ -43,6 +43,7 @@
 		<Unit filename="UnitTest/MediaUnitTest.h" />
 		<Unit filename="UnitTest/ShapeUnitTest.h" />
 		<Unit filename="include/Circle.h" />
+		<Unit filename="include/Command.h" />
 		<Unit filename="include/Document.h" />
 		<Unit filename="include/Media.h" />
 		<Unit filename="include/Rectangle.h" />

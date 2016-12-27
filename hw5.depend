@@ -63,34 +63,34 @@
 1475558702 source:c:\users\mystia\downloads\105598010_hw2\src\triangle.cpp
 	"Triangle.h"
 
-1481191376 source:c:\users\mystia\desktop\posd\main.cpp
-	<iostream>
-	"cppunitlite/TestHarness.h"
-	"UnitTest/MediaUnitTest.h"
-	"UnitTest/ShapeUnitTest.h"
+1482826601 source:c:\users\mystia\desktop\posd\main.cpp
+	"Command.h"
+	"Shapes.h"
+	"Media.h"
 	<fstream>
-	<stdio.h>
-	<stdlib.h>
+	<cstdio>
+	<cstdlib>
+	<cstring>
 	<map>
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\testharness.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\testharness.h
 	"Test.h"
 	"TestResult.h"
 	"Failure.h"
 	"TestRegistry.h"
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\test.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\test.h
 	<cmath>
 	"SimpleString.h"
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\simplestring.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\simplestring.h
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\testresult.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\testresult.h
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\failure.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\failure.h
 	"SimpleString.h"
 
-1480990376 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
+1481192592 c:\users\mystia\desktop\posd\cppunitlite\testregistry.h
 
 1476351190 c:\users\mystia\desktop\posd\unittest\unittest.h
 	"Shapes.h"
@@ -103,7 +103,7 @@
 	"Rectangle.h"
 	"Triangle.h"
 
-1481192592 c:\users\mystia\desktop\posd\include\shape.h
+1482809672 c:\users\mystia\desktop\posd\include\shape.h
 	<algorithm>
 	<vector>
 	<string>
@@ -225,7 +225,7 @@
 	"Vistors.h"
 	"Media.h"
 
-1481192592 c:\users\mystia\desktop\posd\include\media.h
+1482809690 c:\users\mystia\desktop\posd\include\media.h
 	"Shapes.h"
 	<vector>
 	<stack>
@@ -242,7 +242,7 @@
 	"Media.h"
 	"Shape.h"
 
-1480990376 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
+1482827236 c:\users\mystia\desktop\posd\unittest\mediaunittest.h
 	"Media.h"
 	"Shapes.h"
 	"Document.h"
@@ -250,7 +250,7 @@
 	<string.h>
 	<iostream>
 
-1480990376 c:\users\mystia\desktop\posd\unittest\shapeunittest.h
+1481192593 c:\users\mystia\desktop\posd\unittest\shapeunittest.h
 	"Shapes.h"
 	<vector>
 	<string.h>
@@ -817,4 +817,46 @@
 1481192979 source:c:\users\mystia\downloads\4fb3bbcbbfebc18feba3abf2d52abbbf\src\triangle.cpp
 	"Triangle.h"
 	<sstream>
+
+1482826330 source:c:\users\mystia\desktop\posd\src\addcommand.cpp
+	"Command.h"
+	"Media.h"
+	<string.h>
+	<cstdio>
+
+1482824529 c:\users\mystia\desktop\posd\include\command.h
+	<string>
+	<map>
+	<stack>
+	<vector>
+
+1482824598 source:c:\users\mystia\desktop\posd\src\definecommand.cpp
+	"Command.h"
+	"Media.h"
+	<string.h>
+	<cstdio>
+	<iostream>
+
+1482825162 source:c:\users\mystia\desktop\posd\src\deletecommand.cpp
+	"Command.h"
+	"Media.h"
+	<string.h>
+	<cstdio>
+	<iostream>
+
+1482821516 source:c:\users\mystia\desktop\posd\src\commandmanager.cpp
+	"Command.h"
+
+1482827445 source:c:\users\mystia\desktop\posd\test.main.cpp
+	<iostream>
+	"cppunitlite/TestHarness.h"
+	"UnitTest/MediaUnitTest.h"
+	"UnitTest/ShapeUnitTest.h"
+	"UnitTest/CommandUnitTest.h"
+
+1482827997 c:\users\mystia\desktop\posd\unittest\commandunittest.h
+	<iostream>
+	<cstring>
+	"Command.h"
+	"Media.h"
 

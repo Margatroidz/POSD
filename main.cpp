@@ -1,20 +1,13 @@
-#include <iostream>
-#include "cppunitlite/TestHarness.h"
-#include "UnitTest/MediaUnitTest.h"
-#include "UnitTest/ShapeUnitTest.h"
+#include "Command.h"
+#include "Shapes.h"
+#include "Media.h"
 #include <fstream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <map>
 
 using namespace std;
-
-struct MediaInfo
-{
-    Media* media;
-    bool isCombo;
-    char* def;
-};
 
 void Save(char* input, map<string, MediaInfo*> &container);
 void Load(char* input, map<string, MediaInfo*> &container);
@@ -35,9 +28,8 @@ void AddDef(char* def, char* target);
 //media命名自行避開關鍵字，否則部分操作會異常
 int main()
 {
-    TestResult testResult;
-    TestRegistry::runAllTests(testResult);
     map<string, MediaInfo*> shapeContainer;
+    CommandManager cm;
 
     while(true)
     {
@@ -52,7 +44,9 @@ int main()
             if(input[0] == '\0') printf("   please enter some word !\n");
             else if(strncmp(input, "def ", 4) == 0)
             {
-                ExtractShape(input, 4, shapeContainer);
+                Command* c = new DefineCommand(input, shapeContainer);
+                cm.Excute(c);
+                //ExtractShape(input, 4, shapeContainer);
             }
             else if(strncmp(input, "save", 4) == 0)
             {
@@ -64,7 +58,9 @@ int main()
             }
             else if(strncmp(input, "add", 3) == 0)
             {
-                Add(input, shapeContainer);
+                Command* c = new AddCommand(input, shapeContainer);
+                cm.Excute(c);
+                //Add(input, shapeContainer);
             }
             else if(strncmp(input, "show", 4) == 0)
             {
@@ -73,11 +69,21 @@ int main()
             }
             else if(strncmp(input, "delete", 4) == 0)
             {
-                Delete(input, shapeContainer);
+                Command* c = new DeleteCommand(input, shapeContainer);
+                cm.Excute(c);
+                //Delete(input, shapeContainer);
             }
             else if(strncmp(input, "exit", 4) == 0)
             {
                 break;
+            }
+            else if(strncmp(input, "undo", 4) == 0)
+            {
+                cm.Undo();
+            }
+            else if(strncmp(input, "redo", 4) == 0)
+            {
+                cm.Redo();
             }
             else
             {

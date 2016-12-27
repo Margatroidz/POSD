@@ -66,6 +66,13 @@ private:
     string _text;
 };
 
+struct MediaInfo
+{
+    Media* media;
+    bool isCombo;
+    char* def;
+};
+
 class MediaVisitor
 {
 public:

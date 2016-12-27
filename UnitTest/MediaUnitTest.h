@@ -28,7 +28,6 @@ TEST(ComboMediaTest, RegularHexagon)
     AreaVisitor* av = new AreaVisitor();
     cm->Accept(av);
     DOUBLES_EQUAL(10.3923, av->TotalArea(), THRESH_HLOD);
-
     delete r;
     delete t1;
     delete t2;
